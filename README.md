@@ -1,5 +1,7 @@
 # retail
-Problem Statement:
+
+# __Problem Statement:__
+
 Requirement is to build RESTful service with following features.
 
 MyRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps.
@@ -26,3 +28,50 @@ http://redsky.target.com/v2/pdp/tcin/13860428?excludes=taxonomy,price,promotion,
  Reads pricing information from a NoSQL data store and combines it with the product id and name from the HTTP request into a single response.
 
 BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing a JSON request body similar to the GET response, and updates the product’s price in the data store.
+
+# __Solution:__
+
+1) Rest Api for doing a get call which will fetch data from NOsql store and from the given end point of redsky, will merge both results and then create JSON resposne for api.
+2) Rest API for doing the product mrp update once the id is validated by doig a get call to noSql store and then updating tghe price attribute in data store.
+3) The classes and teh interfaces making sure that the service is loosely coupled and structured so that future changes can be easily accomodated. Like chaging the data store will require only implementing a new interface for the new data store.
+4) Unit test cases for controller and service.
+
+# __Tech Satck:__
+1. FrameWork: SpringBoot
+
+2. Data Store: MongoDb
+
+3. Coding Language: Java
+
+4. Springframework RestTemplate for calling to downstream services, used Mapstruct for converting POJO from one to another POJO (like from api dto to service dto)
+
+5. Swagger supported UI for API calls
+
+6. Unit Tests: JUnit, Mockito
+
+7. Build: gradle
+
+Mongo UI Tool: Robo 3T 1.3.1
+
+# __Test Data:__
+Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
+Product update request payload: 
+{
+    "id" : 13860428,
+    "current_price" : {
+        "value" : 50,
+        "currency_code" : "USD"
+    }
+}
+
+# __To Run Project:__
+
+1. Seed Data For Mongo DB:
+
+2. command to build Project: ./gradlew clean build
+
+3. Command to run: Needs configuration in intellij under the path-> run -> edit configurations -> follow the screen shot to configure.
+![image]
+
+
+
