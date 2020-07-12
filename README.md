@@ -1,7 +1,6 @@
 # retail
 
-# __Problem 
-Statement:__
+# __Problem Statement:__
 
 Requirement is to build RESTful service with following features.
 
@@ -32,6 +31,8 @@ BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing 
 
 # __Solution:__
 
+1)
+
 # __Tech Satck:__
 FrameWork: SpringBoot
 Data Store: MongoDb
@@ -39,3 +40,4 @@ Coding Language: Java
 Springframework RestTemplate for calling to downstream services
 Swagger supported UI for API calls
 Unit Tests: JUnit, Mockito
+Build: gradle
