@@ -31,7 +31,10 @@ BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing 
 
 # __Solution:__
 
-1)
+1) Rest Api for doing a get call which will fetch data from NOsql store and from the given end point of redsky, will merge both results and then create JSON resposne for api.
+2) Rest API for doing the product mrp update once the id is validated by doig a get call to noSql store and then updating tghe price attribute in data store.
+3) The classes and teh interfaces making sure that the service is loosely coupled and structured so that future changes can be easily accomodated. Like chaging the data store will require only implementing a new interface for the new data store.
+4) Unit test cases for controller and service.
 
 # __Tech Satck:__
 FrameWork: SpringBoot
@@ -41,3 +44,16 @@ Springframework RestTemplate for calling to downstream services
 Swagger supported UI for API calls
 Unit Tests: JUnit, Mockito
 Build: gradle
+
+#__ Test Data_
+Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
+Product update request payload: 
+{
+    "id" : 13860428,
+    "current_price" : {
+        "value" : 50,
+        "currency_code" : "USD"
+    }
+}
+
+#__ How to run the projct __
