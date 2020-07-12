@@ -58,7 +58,7 @@ Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
 Product update request payload: 
 {
     "id" : 13860428,
-    "current_price" : {
+    "currentPrice" : {
         "value" : 50,
         "currency_code" : "USD"
     }
@@ -66,7 +66,29 @@ Product update request payload:
 
 # __To Run Project:__
 
-1. Seed Data For Mongo DB:
+1. Seed Data For Mongo DB: 
+a) Create database product-db
+b) Create collection product
+c) Insert document for seed data:
+
+{
+    "_id" : 13860428,
+    "_class" : "com.warehouse.retail.services.dal.model.Product",
+    "current_price" : {
+        "value" : 65,
+        "currency_code" : "USD"
+    }
+}
+
+{
+    "_id" : 54456119,
+    "_class" : "com.warehouse.retail.services.dal.model.Product",
+    "current_price" : {
+        "value" : 70,
+        "currency_code" : "USD"
+    }
+}
+
 
 2. command to build Project: ./gradlew clean build
 
