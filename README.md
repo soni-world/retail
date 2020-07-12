@@ -76,18 +76,18 @@ Product update request payload:
 
 4. After this in Intellij click on the run application, screen shot attached.
 
-![](screenshots/torunproject)
+![](screenshots/torunproject.png)
 
 5. To open the local swagger UI to use the api: 
 URL: http://localhost:8080/swagger-ui.html#/
 
-![](screenshots/swaggerUIimage)
+![](screenshots/swaggerUIimage.png)
 
 6. GET API request and resposne for fetch product detail:
-![](screenshots/fetchAPI)
+![](screenshots/fetchAPI.png)
 
 7. GET API request and resposne for fetch product detai when product is not in data store.
-![](screenshots/DataNotInDbRequest)
+![](screenshots/DataNotInDbRequest.png)
 
 
 
