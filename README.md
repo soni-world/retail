@@ -37,15 +37,21 @@ BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing 
 4) Unit test cases for controller and service.
 
 # __Tech Satck:__
-FrameWork: SpringBoot
+1. FrameWork: SpringBoot
+
 Data Store: MongoDb
+
 Coding Language: Java
+
 Springframework RestTemplate for calling to downstream services
+
 Swagger supported UI for API calls
+
 Unit Tests: JUnit, Mockito
+
 Build: gradle
 
-#__ Test Data_
+# __Test Data:__
 Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
 Product update request payload: 
 {
@@ -56,4 +62,4 @@ Product update request payload:
     }
 }
 
-#__ How to run the projct __
+# __To Run Project:__
