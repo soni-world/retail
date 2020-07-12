@@ -1,5 +1,8 @@
 # retail
-Problem Statement:
+
+# __Problem 
+Statement:__
+
 Requirement is to build RESTful service with following features.
 
 MyRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps.
@@ -26,3 +29,13 @@ http://redsky.target.com/v2/pdp/tcin/13860428?excludes=taxonomy,price,promotion,
  Reads pricing information from a NoSQL data store and combines it with the product id and name from the HTTP request into a single response.
 
 BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing a JSON request body similar to the GET response, and updates the product’s price in the data store.
+
+# __Solution:__
+
+# __Tech Satck:__
+FrameWork: SpringBoot
+Data Store: MongoDb
+Coding Language: Java
+Springframework RestTemplate for calling to downstream services
+Swagger supported UI for API calls
+Unit Tests: JUnit, Mockito
