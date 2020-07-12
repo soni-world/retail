@@ -1,0 +1,35 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+
+#Intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+build/
+.gradle/
+gradlew.bat
+bin/
+LOG_DIR_IS_UNDEFINED/
+out/
+
+.project
+.DS_Store
+.classpath
+.settings/
+.springBeans
+
+
+local_logs/
+
+LOG_FILE*
