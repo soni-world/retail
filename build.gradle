@@ -1,0 +1,82 @@
+buildscript {
+    ext {
+        springBootVersion = '1.3.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+//apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'com.warehouse.retail'
+    version = '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+}
+
+//apply from: 'test.gradle'
+apply from: 'mapstruct.gradle'
+
+ext {
+    springBootVersion = '1.3.1.RELEASE'
+    jacksonVersion = '2.6.4'
+    dropWizardMetricsVersion = '3.1.2'
+}
+
+ext {
+    mainClass = "com.warehouse.retail.apis.Application"
+    javaLanguageLevel = 1.8
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter',
+            'org.springframework.boot:spring-boot-starter-web')
+
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-jetty:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-actuator:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-aop:$springBootVersion")
+    compile('org.springframework.data:spring-data-mongodb:1.9.6.RELEASE')
+
+    compile('org.apache.httpcomponents:httpclient:4.5.3')
+    //Jackson
+    compile("com.fasterxml.jackson.core:jackson-core:$jacksonVersion")
+    compile("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion")
+    compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+
+    // Using sfl4j allows us to replace different loggers later, if desired
+    compile("org.slf4j:slf4j-api:1.7.12")
+    compile("ch.qos.logback:logback-classic:1.2.3")
+    compile("ch.qos.logback:logback-core:1.2.3")
+
+    compile("io.springfox:springfox-swagger2:2.3.1")
+    compile("io.springfox:springfox-swagger-ui:2.3.1")
+
+    compile("com.google.guava:guava:18.0")
+    compile("com.google.code.findbugs:jsr305:3.0.1")
+    compile("com.google.code.findbugs:annotations:3.0.1")
+
+    compile("io.dropwizard.metrics:metrics-core:$dropWizardMetricsVersion")
+    compile("io.dropwizard.metrics:metrics-jersey2:$dropWizardMetricsVersion")
+    compile("io.dropwizard.metrics:metrics-jvm:$dropWizardMetricsVersion")
+    compile("io.dropwizard.metrics:metrics-jetty9:$dropWizardMetricsVersion")
+    compile("io.dropwizard.metrics:metrics-logback:$dropWizardMetricsVersion")
+    
+//    test 
+    compile("org.springframework.boot:spring-boot-starter-test:1.3.1.RELEASE")
+    
+    compile 'org.mapstruct:mapstruct-jdk8:1.2.0.Final'
+    compile 'org.mapstruct:mapstruct-processor:1.2.0.Final'
+    compile 'org.unitils:unitils-core:3.4.2'
+
+
+}
