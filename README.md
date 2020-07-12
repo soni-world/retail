@@ -39,17 +39,19 @@ BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing 
 # __Tech Satck:__
 1. FrameWork: SpringBoot
 
-Data Store: MongoDb
+2. Data Store: MongoDb
 
-Coding Language: Java
+3. Coding Language: Java
 
-Springframework RestTemplate for calling to downstream services
+4. Springframework RestTemplate for calling to downstream services, used Mapstruct for converting POJO from one to another POJO (like from api dto to service dto)
 
-Swagger supported UI for API calls
+5. Swagger supported UI for API calls
 
-Unit Tests: JUnit, Mockito
+6. Unit Tests: JUnit, Mockito
 
-Build: gradle
+7. Build: gradle
+
+Mongo UI Tool: Robo 3T 1.3.1
 
 # __Test Data:__
 Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
@@ -63,3 +65,13 @@ Product update request payload:
 }
 
 # __To Run Project:__
+
+1. Seed Data For Mongo DB:
+
+2. command to build Project: ./gradlew clean build
+
+3. Command to run: Needs configuration in intellij under the path-> run -> edit configurations -> follow the screen shot to configure.
+![image]
+
+
+
