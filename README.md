@@ -91,7 +91,12 @@ URL: http://localhost:8080/swagger-ui.html#/
 ![](screenshots/DataNotInDbRequest.png)
 
 8. Update API call for product mrp.
-![](screenshots/)
+![](screenshots/updateAPI.png)
+
+9. After Update get call for same product id.
+![](screenshots/afterupdategetcall.png)
+
+
 
 
 
