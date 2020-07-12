@@ -71,7 +71,26 @@ Product update request payload:
 2. command to build Project: ./gradlew clean build
 
 3. Command to run: Needs configuration in intellij under the path-> run -> edit configurations -> follow the screen shot to configure.
-![image]
+
+![](screenshots/Screen%20Shot%202020-07-12%20at%205.22.24%20PM.png)
+
+4. After this in Intellij click on the run application, screen shot attached.
+
+![](screenshots/torunproject)
+
+5. To open the local swagger UI to use the api: 
+URL: http://localhost:8080/swagger-ui.html#/
+
+![](screenshots/swaggerUIimage)
+
+6. GET API request and resposne for fetch product detail:
+![](screenshots/fetchAPI)
+
+7. GET API request and resposne for fetch product detai when product is not in data store.
+![](screenshots/DataNotInDbRequest)
+
+
+
 
 
 
