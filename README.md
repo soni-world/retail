@@ -121,7 +121,7 @@ URL: http://localhost:8080/swagger-ui.html#/
 ![](screenshots/afterupdategetcall.png)
 
 10. To run unit tests.
-![](screenshots/testRun)
+![](screenshots/testRun.png)
 
 
 
