@@ -55,7 +55,7 @@ BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing 
 
 9. Mongo UI Tool: Robo 3T 1.3.1
 
-# __Test Data:__
+# __Testing Data:__
 Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
 Product update request payload: 
 {
@@ -119,6 +119,9 @@ URL: http://localhost:8080/swagger-ui.html#/
 
 9. After Update get call for same product id.
 ![](screenshots/afterupdategetcall.png)
+
+10. To run unit tests.
+![](screenshots/testRun)
 
 
 
