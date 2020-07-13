@@ -51,7 +51,9 @@ BONUS: Accepts an HTTP PUT request at the same path (/products/{id}),containing 
 
 7. Build: gradle
 
-Mongo UI Tool: Robo 3T 1.3.1
+8. Logger: SLF4J
+
+9. Mongo UI Tool: Robo 3T 1.3.1
 
 # __Test Data:__
 Valid Ids: Example product IDs: 13860428, 54456119, 13264003, 12954218
