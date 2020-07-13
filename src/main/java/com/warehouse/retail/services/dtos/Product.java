@@ -11,6 +11,17 @@ public class Product {
    String name;
    Map<String, Object> currentPrice;
 
+   public Product() {
+
+   }
+
+   public Product(Integer id, String name, Map<String, Object> currentPrice) {
+
+      this.id = id;
+      this.name = name;
+      this.currentPrice = currentPrice;
+   }
+
    public Integer getId() {
 
       return id;

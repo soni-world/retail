@@ -11,6 +11,17 @@ public class ProductUpdateRequest {
    String name;
    Map<String, Object> currentPrice;
 
+   public ProductUpdateRequest() {
+
+   }
+
+   public ProductUpdateRequest(Integer id, String name, Map<String, Object> currentPrice) {
+
+      this.id = id;
+      this.name = name;
+      this.currentPrice = currentPrice;
+   }
+
    public Integer getId() {
 
       return id;

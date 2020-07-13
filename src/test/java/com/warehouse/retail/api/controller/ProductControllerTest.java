@@ -2,6 +2,8 @@ package com.warehouse.retail.api.controller;
 
 import com.warehouse.retail.apis.controller.ProductController;
 import com.warehouse.retail.apis.dtos.ProductResponse;
+import com.warehouse.retail.apis.dtos.ProductUpdateRequest;
+import com.warehouse.retail.apis.dtos.Response;
 import com.warehouse.retail.apis.mappers.ApiServiceDtoMapper;
 import com.warehouse.retail.services.ProductService;
 import org.junit.Before;
@@ -67,5 +69,23 @@ public class ProductControllerTest {
 
       ResponseEntity<ProductResponse> result = controller.fetchProduct(id);
       assertReflectionEquals(productMockResponse, result.getBody());
+   }
+
+   @Test
+   public void shouldUpdateProductPrice() {
+
+      Integer id = 13860428;
+      Map<String, Object> priceData = new HashMap<>();
+      priceData.put("value", 60);
+      priceData.put("currency_code", "USD");
+      Response mocked = new Response("Successfuly updated");
+
+      ProductUpdateRequest productUpdateRequest = new ProductUpdateRequest(id, "test_data", priceData);
+      com.warehouse.retail.services.dtos.Product mockProduct = mock(com.warehouse.retail.services.dtos.Product.class);
+
+      when(mapper.apiToServiceUpdateProductRequest(id, productUpdateRequest)).thenReturn(mockProduct);
+
+      ResponseEntity<Response> result = controller.updateProduct(id, productUpdateRequest);
+      assertReflectionEquals(mocked, result.getBody());
    }
 }
